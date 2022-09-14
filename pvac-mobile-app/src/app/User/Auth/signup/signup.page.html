@@ -1,0 +1,55 @@
+<ion-content color="light">
+
+  <div class="backButton">
+    <ion-button (click)="goBack()" fill=clear>
+      <ion-icon name="chevron-back"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="logo">
+    <ion-avatar item-left>
+      <img src="../../../../assets/icon/favicon.png" alt="">
+    </ion-avatar>
+  </div>
+
+  <div class="form">
+
+    <div id="div">
+      <ion-label position="floating">CNIC</ion-label>
+      <ion-item lines='none'>
+        <ion-icon slot="start" name="id-card-outline"></ion-icon>
+        <ion-input [(ngModel)]='cnic' type=number maxlength=14 minlength=14 placeholder='xxxxxxxxxxxxxx'></ion-input>
+      </ion-item>
+    </div>
+
+    <div id="div">
+      <ion-label position="floating">Mobile Number</ion-label>
+      <ion-item lines='none'>
+        <ion-icon slot="start" name="phone-portrait-outline"></ion-icon>
+        <ion-input [(ngModel)]='mobile' type=tel maxlength=11 minlength=11 placeholder='03xx-xxxxxxx'></ion-input>
+      </ion-item>
+    </div>
+
+    <div id="div">
+      <ion-label position="floating">Email</ion-label>
+      <ion-item lines='none'>
+        <ion-icon slot="start" name="mail-outline"></ion-icon>
+        <ion-input [(ngModel)]='email' type=email placeholder='username@mail.com'></ion-input>
+      </ion-item>
+    </div>
+
+    <div id="div">
+      <ion-label position="floating">Password</ion-label>
+      <ion-item lines='none'>
+        <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+        <ion-input [(ngModel)]='password' type=password placeholder='password'></ion-input>
+      </ion-item>
+    </div>
+
+    <ion-button (click)="signup()"><span *ngIf="!spin">Sign Up</span><ion-spinner *ngIf="spin"  mode=ios></ion-spinner></ion-button>
+    <div class="extras">
+      <ion-text routerLink='/usersignup' routerDirection='forward'>Login</ion-text>
+      <ion-text routerLink='/userforget' routerDirection='forward'>Forget Password?</ion-text>
+    </div>
+  </div>
+
+</ion-content>

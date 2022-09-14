@@ -1,0 +1,7 @@
+{
+  "name": "Digital_Polio_Vacination",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
